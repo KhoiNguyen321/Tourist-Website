@@ -1,24 +1,18 @@
 import { useContext } from 'react';
 import ModelContext from '../context/ModelContext';
+import { CLOSE_MODEL } from '../context/types/ModelTypes';
 
-const Model = () => {
+const Model = (props) => {
+  console.log('propssss', props.current);
   const { state, dispatch } = useContext(ModelContext);
   const close = (e) => {
-    if (e.target.getAttribute('class')) {
-      dispatch({ type: 'CLOSE_MODEL' });
+    if (e.target.getAttribute('class') === 'model') {
+      dispatch({ type: CLOSE_MODEL });
     }
   };
-  return state.modelStatus ? (
+  return state.modelStatus && state.current === props.current ? (
     <div className='model' onClick={close}>
-      <div className='model__body'>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia eius
-        quas, dolores voluptates perspiciatis suscipit nam inventore sed autem
-        assumenda. Nemo nulla tempore ex quae eveniet earum magni ducimus
-        necessitatibus. Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit. Quia eius quas, dolores voluptates perspiciatis suscipit nam
-        inventore sed autem assumenda. Nemo nulla tempore ex quae eveniet earum
-        magni ducimus necessitatibus.
-      </div>
+      <div className='model__body'>{props.children}</div>
     </div>
   ) : (
     <></>

@@ -3,8 +3,10 @@ import ModelReducer from '../reducers/ModelReducer';
 import ModelContext from '../ModelContext';
 
 const ModelProvider = (props) => {
-  console.log('children', props);
-  const [state, dispatch] = useReducer(ModelReducer, { modelStatus: false });
+  const [state, dispatch] = useReducer(ModelReducer, {
+    modelStatus: false,
+    current: '',
+  });
 
   return (
     <ModelContext.Provider value={{ state, dispatch }}>
