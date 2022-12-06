@@ -44,3 +44,12 @@
        }
      }
 }
+
+@mixin toggle($bg, $width, $height, $mg){
+     display: block;
+	background: $bg;
+	width: $width;
+	height: $height;
+	margin-top: $mg;
+     transition: all .3s linear;
+}
