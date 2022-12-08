@@ -5,6 +5,7 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import ModelProvider from './context/providers/ModelProvider';
 import NavProvider from './context/providers/NavProvider';
+import DestinationsProvider from './context/providers/DestinationsProvider';
 import Nav from './components/Nav';
 import Toggle from './components/Toggle';
 
@@ -13,15 +14,17 @@ function App() {
     <Router>
       <ModelProvider>
         <NavProvider>
-          <Toggle />
-          <Nav />
-          <HelmetProvider>
-            <Routes>
-              <Route path='/' exact element={<Home />} />
-              <Route path='/about' exact element={<About />} />
-              <Route path='*' element={<NotFound />} />
-            </Routes>
-          </HelmetProvider>
+          <DestinationsProvider>
+            <Toggle />
+            <Nav />
+            <HelmetProvider>
+              <Routes>
+                <Route path='/' exact element={<Home />} />
+                <Route path='/about' exact element={<About />} />
+                <Route path='*' element={<NotFound />} />
+              </Routes>
+            </HelmetProvider>
+          </DestinationsProvider>
         </NavProvider>
       </ModelProvider>
     </Router>

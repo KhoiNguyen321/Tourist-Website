@@ -3,7 +3,6 @@ import ModelContext from '../context/ModelContext';
 import { CLOSE_MODEL } from '../context/types/ModelTypes';
 
 const Model = (props) => {
-  console.log('propssss', props.current);
   const { state, dispatch } = useContext(ModelContext);
   const close = (e) => {
     if (e.target.getAttribute('class') === 'model') {
