@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import Details from './pages/Details';
 import ModelProvider from './context/providers/ModelProvider';
 import NavProvider from './context/providers/NavProvider';
 import DestinationsProvider from './context/providers/DestinationsProvider';
@@ -21,6 +22,7 @@ function App() {
               <Routes>
                 <Route path='/' exact element={<Home />} />
                 <Route path='/about' exact element={<About />} />
+                <Route path='/details/:id' exact element={<Details />} />
                 <Route path='*' element={<NotFound />} />
               </Routes>
             </HelmetProvider>

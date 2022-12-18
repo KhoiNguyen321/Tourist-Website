@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Model from '../components/Model';
@@ -7,6 +7,7 @@ import { OPEN_MODEL } from '../context/types/ModelTypes';
 import Register from '../auth/Register';
 import Login from '../auth/Login';
 import Destinations from '../components/Destinations';
+import Services from '../components/services/Services';
 const Home = () => {
   const { dispatch } = useContext(ModelContext);
   const [state] = useState({
@@ -16,6 +17,10 @@ const Home = () => {
   });
   const [registerMode] = useState('registerMode');
   const [loginMode] = useState('loginModel');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
@@ -38,6 +43,7 @@ const Home = () => {
         <Login currentMode={registerMode} />
       </Model>
       <Destinations />
+      <Services />
     </>
   );
 };
