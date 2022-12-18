@@ -7,6 +7,7 @@ import Details from './pages/Details';
 import ModelProvider from './context/providers/ModelProvider';
 import NavProvider from './context/providers/NavProvider';
 import DestinationsProvider from './context/providers/DestinationsProvider';
+import SharedProvider from './context/providers/SharedProvider';
 import Nav from './components/Nav';
 import Toggle from './components/Toggle';
 
@@ -16,16 +17,18 @@ function App() {
       <ModelProvider>
         <NavProvider>
           <DestinationsProvider>
-            <Toggle />
-            <Nav />
-            <HelmetProvider>
-              <Routes>
-                <Route path='/' exact element={<Home />} />
-                <Route path='/about' exact element={<About />} />
-                <Route path='/details/:id' exact element={<Details />} />
-                <Route path='*' element={<NotFound />} />
-              </Routes>
-            </HelmetProvider>
+            <SharedProvider>
+              <Toggle />
+              <Nav />
+              <HelmetProvider>
+                <Routes>
+                  <Route path='/' exact element={<Home />} />
+                  <Route path='/about' exact element={<About />} />
+                  <Route path='/details/:id' exact element={<Details />} />
+                  <Route path='*' element={<NotFound />} />
+                </Routes>
+              </HelmetProvider>
+            </SharedProvider>
           </DestinationsProvider>
         </NavProvider>
       </ModelProvider>
