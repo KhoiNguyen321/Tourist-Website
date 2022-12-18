@@ -6,7 +6,7 @@
     margin-right: auto;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
@@ -15,16 +15,17 @@
 }
 
 .pr {
-	position: relative;
+    position: relative;
 }
 
-.y-center{
+.y-center {
     align-items: center;
 }
 
-.group{
+.group {
     margin-bottom: 1.3rem;
-    &__control{
+
+    &__control {
         display: block;
         width: 100%;
         border-radius: .4rem;
@@ -34,7 +35,8 @@
         height: 5rem;
         padding: 0 2rem;
     }
-    span{
+
+    span {
         font-size: 1.5rem;
         display: inline-block;
         color: $blackDark;
@@ -42,24 +44,24 @@
     }
 }
 
-::placeholder{
-	color: $blackDark;
-	font-size: 1.7rem;
+::placeholder {
+    color: $blackDark;
+    font-size: 1.7rem;
 }
 
-.p-15{
+.p-15 {
     padding: 1.5rem;
 }
 
-.mr-minus-15{
+.mr-minus-15 {
     margin-right: -1.5rem;
 }
 
-.ml-minus-15{
+.ml-minus-15 {
     margin-left: -1.5rem;
 }
 
-.heading{
+.heading {
     margin-bottom: 4rem;
     font-size: 2rem;
     font-weight: 400;
@@ -68,4 +70,3 @@
     background-clip: text;
     transform: rotate(-2deg);
 }
-
