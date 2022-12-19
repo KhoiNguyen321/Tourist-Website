@@ -13,7 +13,7 @@ const Reviews = () => {
         <div className='row ml-minus-15 mr-minus-15'>
           {reviews.length > 0 &&
             reviews.map((review, index) => (
-              <ReviewBody review={review} myKey={index} />
+              <ReviewBody review={review} key={index} />
             ))}
         </div>
       </div>

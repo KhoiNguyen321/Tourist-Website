@@ -1,6 +1,6 @@
-@mixin position($position, $top, $left, $bottom, $right, $width, $height){
+@mixin position($position, $top, $left, $bottom, $right, $width, $height) {
      position: $position;
-     top:$top;
+     top: $top;
      left: $left;
      bottom: $bottom;
      right: $right;
@@ -15,7 +15,7 @@
      height: $height;
 }
 
-@mixin button($color1, $color2, $textColor, $height, $fontSize, $bdr, $paddingVertical, $paddingHorizontal){
+@mixin button($color1, $color2, $textColor, $height, $fontSize, $bdr, $paddingVertical, $paddingHorizontal) {
      background-image: linear-gradient(to right, $color1, $color2);
      color: $textColor;
      text-decoration: none;
@@ -26,35 +26,38 @@
      font-weight: 400;
      border-radius: $bdr;
      padding: $paddingVertical $paddingHorizontal;
-     border:none;
+     border: none;
      outline: none;
      cursor: pointer;
      text-transform: uppercase;
 }
 
-@mixin animation($name, $duration, $timeFunction, $translate1, $translate2){
+@mixin animation($name, $duration, $timeFunction, $translate1, $translate2) {
      animation: $name $duration $timeFunction;
+
      @keyframes #{$name} {
-       0%{
-         opacity: 0;
-         transform: translateY($translate1);
-       } 100%{
-         opacity: 1;
-         transform: translateY($translate2);
-       }
+          0% {
+               opacity: 0;
+               transform: translateY($translate1);
+          }
+
+          100% {
+               opacity: 1;
+               transform: translateY($translate2);
+          }
      }
 }
 
-@mixin toggle($bg, $width, $height, $mg){
+@mixin toggle($bg, $width, $height, $mg) {
      display: block;
-	background: $bg;
-	width: $width;
-	height: $height;
-	margin-top: $mg;
+     background: $bg;
+     width: $width;
+     height: $height;
+     margin-top: $mg;
      transition: all .3s linear;
 }
 
-@mixin status($bg, $color){
+@mixin status($bg, $color) {
      padding: .6rem 1.3rem;
      background: $bg;
      color: $color;

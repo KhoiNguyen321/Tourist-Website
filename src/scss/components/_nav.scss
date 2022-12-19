@@ -1,23 +1,27 @@
 @use "../abstracts" as *;
 
 
-.navLayer{
+.navLayer {
     @include position(fixed, 0, 0, 0, 0, 100%, 100%);
     background: rgba(0, 0, 0, .6);
-    z-index: 3;;
+    z-index: 3;
+    ;
 }
 
-.nav{
+.nav {
     background: $white;
     @include position(fixed, 0, null, 0, 0, 31.2rem, 100%);
     z-index: 4;
     @include align(flex, center, center, 100%);
     transition: all .3s linear;
-    &__content{
+
+    &__content {
         width: 100%;
+
         li {
             list-style: none;
-            a{
+
+            a {
                 text-decoration: none;
                 color: $black;
                 display: block;
@@ -26,25 +30,28 @@
                 font-size: 1.6rem;
                 font-weight: 400;
                 position: relative;
-                &::before{
-                 content: '';
-                 background: linear-gradient(to right, $main1, $main2);
-                 @include position(absolute, 0, 0, 0, 0, 100%, 100%);
-                 z-index: -1;
-                 transform: scale(0);
-                 transition: all .3s linear;
+
+                &::before {
+                    content: '';
+                    background: linear-gradient(to right, $main1, $main2);
+                    @include position(absolute, 0, 0, 0, 0, 100%, 100%);
+                    z-index: -1;
+                    transform: scale(0);
+                    transition: all .3s linear;
                 }
-                &:hover::before{
+
+                &:hover::before {
                     transform: scale(1);
                 }
-                &:hover{
+
+                &:hover {
                     color: $white;
                 }
             }
         }
     }
 
-    &--close{
+    &--close {
         transform: translateX(100%);
     }
 
