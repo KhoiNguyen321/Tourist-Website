@@ -26,14 +26,16 @@
     margin-bottom: 1.3rem;
 
     &__control {
-        display: block;
-        width: 100%;
-        border-radius: .4rem;
-        outline: none;
-        font-size: 1.6rem;
-        border: 1px solid $silver;
-        height: 5rem;
-        padding: 0 2rem;
+        @include control(5rem, 0, 1.5rem, $silverLight-45);
+    }
+
+    &__textarea {
+        @include control(10rem, 1.5rem, 1.5rem, $silverLight-45);
+
+        &::placeholder {
+            font-family: sans-serif;
+            font-size: 1.5rem;
+        }
     }
 
     span {
@@ -46,7 +48,7 @@
 
 ::placeholder {
     color: $blackDark;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .p-15 {
@@ -69,4 +71,5 @@
     color: transparent;
     background-clip: text;
     transform: rotate(-2deg);
+    text-transform: capitalize;
 }
