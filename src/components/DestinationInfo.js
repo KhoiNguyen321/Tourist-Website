@@ -1,5 +1,13 @@
 import DestinationDetails from './DestinationDetails';
 const DestinationInfo = ({ details }) => {
+  const greeting = 'hey hi';
+  var times = 4;
+  if (times > 3) {
+    let greeting = 'say Hello instead';
+    console.log(greeting);
+  }
+
+  console.log(greeting); //"say Hello instead"
   return (
     <div className='destinationInfo'>
       <div className='container'>
