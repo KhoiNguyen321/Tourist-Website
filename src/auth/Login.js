@@ -37,7 +37,7 @@ const Login = (props) => {
           value={state.password}
         />
       </div>
-      <div className='group flex space-between y-center'>
+      <div className='group model__row'>
         <input type='submit' name='' className='btn-dark' value='Login' />
         <span
           onClick={() =>

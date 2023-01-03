@@ -10,12 +10,38 @@
     @include abstracts.position(absolute, 3rem, 0, null, null, null, null);
     z-index: 1;
 
+    @include abstracts.responsive(large) {
+      left: 5rem;
+    }
+
+    @include abstracts.responsive(medium) {
+      left: 4rem;
+    }
+
+    @include abstracts.responsive(small) {
+      left: 2rem;
+    }
+
+    @include abstracts.responsive(xsmall) {
+      left: 1.55rem;
+    }
+
     img {
       width: 15rem;
       height: auto;
       object-fit: cover;
       cursor: pointer;
+
+      @include abstracts.responsive(small) {
+        width: 13rem;
+      }
+
+      @include abstracts.responsive(xsmall) {
+        width: 10rem;
+      }
     }
+
+
   }
 
   &__video {
@@ -61,6 +87,18 @@
           font-size: 4.2rem;
           line-height: 3rem;
           @include abstracts.animation(heading, 1s, ease-in, -8rem, 0);
+
+          @include abstracts.responsive(medium) {
+            font-size: 4rem;
+          }
+
+          @include abstracts.responsive(small) {
+            font-size: 3rem;
+          }
+
+          @include abstracts.responsive(xsmall) {
+            font-size: 2rem;
+          }
         }
 
         &__p {
@@ -68,6 +106,13 @@
           color: abstracts.$white;
           font-size: 1.5rem;
           @include abstracts.animation(subHeading, 1s, ease-out, -10rem, 0);
+
+          @include abstracts.responsive(small) {
+            margin-top: .5rem;
+            font-size: 1.4rem;
+            line-height: 2rem;
+          }
+
         }
 
         &__link {

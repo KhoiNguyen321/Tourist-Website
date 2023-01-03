@@ -44,5 +44,11 @@
                 width: 100%;
             }
         }
+
+        @if $i ==4 {
+            @include responsive(medium) {
+                width: 100%;
+            }
+        }
     }
 }

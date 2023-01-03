@@ -5,7 +5,6 @@
     @include position(fixed, 0, 0, 0, 0, 100%, 100%);
     background: rgba(0, 0, 0, .6);
     z-index: 3;
-    ;
 }
 
 .nav {
@@ -14,6 +13,10 @@
     z-index: 4;
     @include align(flex, center, center, 100%);
     transition: all .3s linear;
+
+    @include responsive(xsmall) {
+        width: 100%;
+    }
 
     &__content {
         width: 100%;
@@ -30,6 +33,10 @@
                 font-size: 1.6rem;
                 font-weight: 400;
                 position: relative;
+
+                @include responsive(xsmall) {
+                    text-align: center;
+                }
 
                 &::before {
                     content: '';
